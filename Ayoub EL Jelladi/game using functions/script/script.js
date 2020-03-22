@@ -1,4 +1,4 @@
-function getUserChioce(userInput) {
+function getUserChoice(userInput) {
     userInput = userInput.toLowerCase();
     if (userInput === 'bear' || userInput === 'human' || userInput === 'gun') {
         return userInput;
@@ -6,7 +6,7 @@ function getUserChioce(userInput) {
         return 'please enter a valid option';
     }
 }
-function getComputerChioce() {
+function getComputerChoice() {
     var randomNumber = Math.floor(Math.random() * 3);
     if (randomNumber === 0) {
         return 'bear';
@@ -17,14 +17,14 @@ function getComputerChioce() {
     }
 }
 
-function determineWinner(userChioce,computerChioce) {
-    if (userChioce === computerChioce) {
+function determineWinner(userChoice,computerChoice) {
+    if (userChoice === computerChoice) {
         return 'its a tie';
     }
     // if user selects "human"
-    if (userChioce === 'human') {
+    if (userChoice === 'human') {
         // if computer selects "bear"
-        if (computerChioce === 'bear') {
+        if (computerChoice === 'bear') {
             return 'You have been mauled by a bear';
             // if computer selects "gun"
         }else{
@@ -32,19 +32,19 @@ function determineWinner(userChioce,computerChioce) {
         }
     }
     // if user selects a "bear"
-    if (userChioce === 'bear') {
+    if (userChoice === 'bear') {
         // if computer selects "gun"
-        if (computerChioce === 'gun') {
+        if (computerChoice === 'gun') {
             return 'You have been shot by a gun';
             // if computer selects "human"
         }else{
-            return 'You have been mauled a human';
+            return 'You have  mauled a human';
         }
     }
     // if user selects "gun"
-    if (userChioce === 'gun') {
+    if (userChoice === 'gun') {
         // if computer selects "human"
-        if (computerChioce === 'human') {
+        if (computerChoice === 'human') {
             return 'You have been disarmed';
             // if computer selects "bear"
         }else {
@@ -53,11 +53,13 @@ function determineWinner(userChioce,computerChioce) {
     }
 }
 function playGame() {
-    var promptUserChioce = prompt('Please choose bear, human or gun');
-    var userChioce = getUserChioce(promptUserChioce);
-    var computerChioce = getComputerChioce();
-    console.log(userChioce)
-    console.log(computerChioce)
-    console.log(determineWinner(userChioce,computerChioce))
+    var promptUserChoice = prompt('Please choose bear, human or gun');
+    var userChoice = getUserChoice(promptUserChoice);
+    var computerChoice = getComputerChoice();
+    console.log(userChoice)
+    console.log(computerChoice)
+    console.log(determineWinner(userChoice,computerChoice))
 }
 playGame();
+
+    
