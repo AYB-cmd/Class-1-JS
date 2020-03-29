@@ -41,8 +41,7 @@ do {
     total = total + yourChoice;
     msg = prompt('you want something else yes/no :');
 } while (msg == 'yes' || msg == 'YES');
-console.log('Sir your total charges for the order is ' + total +'DH')
 
-
+alert('Sir your total charges for the order is ' + total +'DH')
 
     
