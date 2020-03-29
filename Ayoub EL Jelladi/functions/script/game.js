@@ -6,6 +6,7 @@ function getUserChoice(userInput) {
         return 'please enter a valid option';
     }
 }
+
 function getComputerChoice() {
     var randomNumber = Math.floor(Math.random() * 3);
     if (randomNumber === 0) {
@@ -15,7 +16,9 @@ function getComputerChoice() {
     }else {
         return 'gun';
     }
+    
 }
+
 
 function determineWinner(userChoice,computerChoice) {
     if (userChoice === computerChoice) {
@@ -52,8 +55,9 @@ function determineWinner(userChoice,computerChoice) {
         }
     }
 }
+
 function playGame() {
-    var promptUserChoice = prompt('Please choose bear, human or gun');
+    var promptUserChoice = prompt('Please choose (bear, human or gun) :');
     var userChoice = getUserChoice(promptUserChoice);
     var computerChoice = getComputerChoice();
     console.log(userChoice)

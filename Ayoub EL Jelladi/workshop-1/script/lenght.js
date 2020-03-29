@@ -44,6 +44,6 @@ console.log("a is not equal", $b+ "New var" );
 function palindrome(){
     if
 
-    return true;
-}
+    return true
+};console.log()
 
